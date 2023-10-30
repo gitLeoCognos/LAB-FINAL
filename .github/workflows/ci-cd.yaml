@@ -19,5 +19,5 @@ jobs:
       run: npm test  
     - name: push a docker hub
       run: docker push leonardo2552/lab-final:1.0
-    - name: Deploy al cluster k3d otro
+    - name: Deploy al cluster k3d otro dos
       run: kubectl apply -f .\deployment.yaml
