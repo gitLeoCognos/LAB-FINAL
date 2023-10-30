@@ -17,7 +17,5 @@ jobs:
       run: npm install
     - name: npm test
       run: npm test  
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Deploy al cluster
+      run: kubectl apply -f .\deployment.yaml
