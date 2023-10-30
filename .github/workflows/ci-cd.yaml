@@ -21,3 +21,7 @@ jobs:
       run: docker push leonardo2552/lab-final:1.0
     - name: Deploy al cluster k3d otro dos
       run: kubectl apply -f .\deployment.yaml
+    - name: Deploy services
+      run: kubectl apply -f .\clusterip.yaml
+    - name: Deploy al cluster k3d otro dos
+      run: kubectl apply -f .\ingresscontroller.yaml    
