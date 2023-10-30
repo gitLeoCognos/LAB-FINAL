@@ -5,12 +5,14 @@ on: [push]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: docker:24.0.7
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Crear la imagen de docker
+      run: docker build -t lab-final:1.0 .
+    - name: Imagen creada
+      run: echo imagen creada
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
