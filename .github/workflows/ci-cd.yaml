@@ -13,6 +13,10 @@ jobs:
       run: docker build -t lab-final:1.0 .
     - name: Imagen creada
       run: echo imagen creada
+    - name: npm install
+      run: npm install
+    - name: npm test
+      run: npm test  
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
