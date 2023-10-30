@@ -23,5 +23,5 @@ jobs:
       run: kubectl apply -f .\deployment.yaml
     - name: Deploy services
       run: kubectl apply -f .\clusterip.yaml
-    - name: Deploy al cluster k3d otro dos
+    - name: Deploy al cluster clusterip
       run: kubectl apply -f .\ingresscontroller.yaml    
