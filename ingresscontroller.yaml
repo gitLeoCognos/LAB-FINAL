@@ -6,12 +6,13 @@ metadata:
     ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - http:
+  - host: host.local
+    http:
       paths:
-      - path: /
-        pathType: Prefix
+      - pathType: Prefix
+        path: "/"
         backend:
           service:
-            name: ci-lab-info
+            name: ci-lab-final
             port:
               number: 80
